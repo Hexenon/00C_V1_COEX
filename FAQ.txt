@@ -1,1 +1,2 @@
-.... 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Archivo de documentacion y preguntas frecuentes.
