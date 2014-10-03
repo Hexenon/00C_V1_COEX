@@ -69,7 +69,7 @@
 	     *
 	     */
 		public static function loadLoginPage(){
-			require_once 'login.php';
+			
 		}
 
 		/**
