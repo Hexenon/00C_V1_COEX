@@ -8,14 +8,6 @@
 	"buffers":
 	[
 		{
-			"file": "app/Views/error.php",
-			"settings":
-			{
-				"buffer_size": 451,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/Views/login.php",
 			"settings":
 			{
@@ -24,45 +16,10 @@
 			}
 		},
 		{
-			"file": "app/Views/register_success.php",
-			"settings":
-			{
-				"buffer_size": 352,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Views/register.php",
-			"settings":
-			{
-				"buffer_size": 2303,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Views/protected_page.php",
-			"settings":
-			{
-				"buffer_size": 1046,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/Coex.php",
 			"settings":
 			{
-				"buffer_size": 2835,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<?php\n/**\n * ComidaExpres.com\n *\n * Licencia\n *\n * Este código se ha escrito bajo Licencia de uso comercial por\n * ComidaExpres.com bajo condiciones de trabajo en MVC, con el \n * futuro uso de API's controladoras para inserciones, borrados, \n * actualizados y consultas a la base de datos.\n *\n * No edite o agregue código a éste módulo ya que será actualizado\n * por versiones en un futuro.\n * Si se requiere alguna modificación, contacte al equipo de desarrollo\n * de ComidaExpres.com en: http://comidaexpres.com/developer/support\n * @category    COEX\n * @package     COEX_Control_Panel\n * @copyright   Copyright (c) 2014 TianguisFriki\n * @license     http://tianguisfriki.com/developer/License.html\n */\n\n/**\n * Variable Configuration\n *\n * @category    COEX\n * @package     COEX_Control_Panel\n * @author      Enrique Benavides <Ben@ComidaExpres.com>\n */\n\n	/*\n	--------------------------------------\n	* Variables para la base de datos..\n	--------------------------------------\n	*/\n	define(\"DB_HOST\", \"209.17.116.155\");\n	define(\"DB_USER\", \"login_user\");\n	define(\"DB_PASSWORD\", \"eKcGZr59zAa2BEWU\");\n	define(\"DB_DATABASE\", \"login_hexus\");\n	\n	// isolated variable\n	define(\"SECURE\", FALSE); // Solo para testing.\n	define(\"BASE_URL\", \"http://localhost/clientes/\"); // Importante...\n	/*\n	-------------------------------------\n	* Variables para envío de emails\n	-------------------------------------\n	*/\n	define(\"EMAIL_HOST\", \"localhost\");\n	define(\"EMAIL_USER\", \"no.reply@comidaexpres.com\");p\n	define(\"EMAIL_PASSWORD\", \"berktown11\");\n	define(\"EMAIL_PORT\", 25);\n	define(\"EMAIL_SECURE\",false);\n	define(\"EMAIL_ENCRYP\", \"ssl\");\n	define(\"EMAIL_HTML\", true); \n	define(\"EMAIL_RESPONSE\", \"no.reply@comidaexpres.com\");\n\n	/*\n	-------------------------------------\n	* Variables de respuestas del login\n	-------------------------------------\n	*/\n	define(\"RESPONSE_INCORRECT_PASSWORD\", \"Oops, El usuario y/o contraseña son incorrectos!\");\n	define(\"RESPONSE_LOCKED_ACCOUNT\", \"Oops, Su cuenta ha sido bloqueada por muchos intentos fallidos!\");\n	define(\"RESPONSE_RESET_PASSWORD_EMAIL_OK\", \"Se ha enviado un email con un link para restablecer su contraseña\");\n	define(\"RESPONSE_RESET_PASSWORD_EMAIL_FAIL\", \"Ha ocurrido un error al tratar de enviarle el email, contacte a servicio a clientes\");\n	define(\"RESPONSE_WELCOME_MSG\", \"Ha iniciado sesión\");\n\n	/*\n	-------------------------------------\n	* Variables del bloque del panel de control\n	-------------------------------------\n	*/\n	define(\"CONTROL_PANEL_WELCOME_MSG\", \"Bienvenido al panel de control de sus pedidos\");\n	define(\"CONTROL_PANEL_PENDING_COUNTER\", \"Pedidos pendientes\");\n	define(\"CONTROL_PANEL_SENT_COUNTER\", \"Pedidos enviados\");\n	define(\"CONTROL_PANEL_CUSTOMER_EMAIL_OK\", \"Ha enviado una notificación a su cliente\");\n	define(\"CONTROL_PANEL_CUSTOMER_EMAIL_FAIL\", \"Oops, Ha ocurrido un error al tratar de enviar la notificación\");\n	define(\"CONTROL_PANEL_CHAT_ONLINE\", \"Preguntenos en linea\");\n	define(\"CONTROL_PANEL_CHAT_OFFLINE\", \"Deje una pregunta\");\n\n?>",
-			"file": "app/config/config.php",
-			"file_size": 3003,
-			"file_write_time": 1412298923000000,
-			"settings":
-			{
-				"buffer_size": 2992,
+				"buffer_size": 3176,
 				"line_ending": "Unix"
 			}
 		}
@@ -78,7 +35,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 539.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -95,6 +52,14 @@
 	},
 	"file_history":
 	[
+		"/Users/hexenon/00C_V1_COEX/app/config/config.php",
+		"/Users/hexenon/00C_V1_COEX/Coex.sublime-project",
+		"/Users/hexenon/00C_V1_COEX/app/Views/protected_page.php",
+		"/Users/hexenon/00C_V1_COEX/app/Coex.php",
+		"/Users/hexenon/00C_V1_COEX/app/Views/register.php",
+		"/Users/hexenon/00C_V1_COEX/app/Views/register_success.php",
+		"/Users/hexenon/00C_V1_COEX/app/Views/error.php",
+		"/Users/hexenon/00C_V1_COEX/app/Views/login.php",
 		"/Users/hexenon/Downloads/chilkat-9.5.0-php-5.5-macosx/test.php",
 		"/Users/hexenon/Documents/php_projects/phpversion.php"
 	],
@@ -131,27 +96,116 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Views/error.php",
+					"file": "app/Views/login.php",
 					"settings":
 					{
-						"buffer_size": 451,
+						"buffer_size": 1364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								157,
+								117
 							]
 						],
 						"settings":
 						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -164,164 +218,219 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/Views/login.php",
-					"settings":
-					{
-						"buffer_size": 1364,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/Views/register_success.php",
-					"settings":
-					{
-						"buffer_size": 352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/Views/register.php",
-					"settings":
-					{
-						"buffer_size": 2303,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/Views/protected_page.php",
-					"settings":
-					{
-						"buffer_size": 1046,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								126,
-								126
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "app/Coex.php",
 					"settings":
 					{
-						"buffer_size": 2835,
+						"buffer_size": 3176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1456,
-								1456
+								1473,
+								1473
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 697.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/config/config.php",
-					"settings":
-					{
-						"buffer_size": 2992,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"annotations":
 							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublime_auto_complete": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 319.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -373,6 +482,18 @@
 			[
 				"config",
 				"app/config/config.php"
+			],
+			[
+				"coex",
+				"app/Coex.php"
+			],
+			[
+				"login",
+				"app/Views/login.php"
+			],
+			[
+				"page",
+				"app/Views/protected_page.php"
 			],
 			[
 				"",
