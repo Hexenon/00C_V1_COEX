@@ -40,7 +40,10 @@
     $paths[] = BP . DS . 'app' . DS . 'config';
     $paths[] = BP . DS . 'app' . DS . 'controllers';
     $paths[] = BP . DS . 'app' . DS . 'core';
-    $paths[] = BP . DS . 'design';
+    $paths[] = BP . DS . 'app' . DS . 'models';
+    $paths[] = BP . DS . 'app' . DS . 'views';
+    $paths[] = BP . DS . 'css';
+    $paths[] = BP . DS . 'js';
 
     $appPath = implode(PS, $paths);
     set_include_path($appPath . PS . Coex::registry('original_include_path'));
@@ -49,6 +52,11 @@
     require_once 'dbConnector.php';
     require_once 'functions.php';
     
+    if (login_check(login_check(dbConnector::getConnection()) == true){
+    	Coex::loadControlPanel();
+    }else{
+    	Coex::loadLoginPage();
+    }
 
 	final class Coex{
 		// array static : Manejo de variables en ejecución
@@ -56,7 +64,13 @@
 
 
 
-
+		/**
+	     * Carga la página de login
+	     *
+	     */
+		public static function loadLoginPage(){
+			require_once 'login.php';
+		}
 
 		/**
 	     * Registra una nueva variable

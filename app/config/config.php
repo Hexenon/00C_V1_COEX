@@ -46,7 +46,7 @@
 	-------------------------------------
 	*/
 	define("EMAIL_HOST", "localhost");
-	define("EMAIL_USER", "no.reply@comidaexpres.com");
+	define("EMAIL_USER", "no.reply@comidaexpres.com");p
 	define("EMAIL_PASSWORD", "berktown11");
 	define("EMAIL_PORT", 25);
 	define("EMAIL_SECURE",false);
