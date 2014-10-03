@@ -1,9 +1,9 @@
 <?php
+    
+    sec_session_start();
 
     if (isset($_POST["email"])){
         echo "hola";
-    }else{
-        sec_session_start();
     }
  
     if (login_check(dbConnector::getConnection()) == true) {
