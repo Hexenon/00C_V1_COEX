@@ -49,8 +49,6 @@
     require_once 'dbConnector.php';
     require_once 'functions.php';
     
-    require_once 'login.php';
-
 
 	final class Coex{
 		// array static : Manejo de variables en ejecución
