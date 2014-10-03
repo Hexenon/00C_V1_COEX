@@ -52,8 +52,8 @@
     require_once 'dbConnector.php';
     require_once 'functions.php';
     
-    if (login_check(login_check(dbConnector::getConnection()) == true){
-    	Coex::loadControlPanel();
+    if (login_check(dbConnector::getConnection())) {
+    	# code...
     }else{
     	Coex::loadLoginPage();
     }
