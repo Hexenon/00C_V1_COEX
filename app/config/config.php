@@ -32,10 +32,10 @@
 	* Variables para la base de datos..
 	--------------------------------------
 	*/
-	define("DB_HOST", "127.0.0.1");
-	define("DB_USER", "sec_user");
+	define("DB_HOST", "209.17.116.155");
+	define("DB_USER", "login_user");
 	define("DB_PASSWORD", "eKcGZr59zAa2BEWU");
-	define("DB_DATABASE", "secure_login");
+	define("DB_DATABASE", "login_hexus");
 	
 	// isolated variable
 	define("SECURE", FALSE); // Solo para testing.
@@ -47,7 +47,7 @@
 	*/
 	define("EMAIL_HOST", "localhost");
 	define("EMAIL_USER", "no.reply@comidaexpres.com");
-	define("EMAIL_PASSWORD", "xa2384==1a4x");
+	define("EMAIL_PASSWORD", "berktown11");
 	define("EMAIL_PORT", 25);
 	define("EMAIL_SECURE",false);
 	define("EMAIL_ENCRYP", "ssl");
