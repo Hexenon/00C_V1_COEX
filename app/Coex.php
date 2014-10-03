@@ -38,12 +38,19 @@
      * Set include path
      */
     $paths[] = BP . DS . 'app' . DS . 'config';
+    Coex::register('config', BP . DS . 'app' . DS . 'config');
     $paths[] = BP . DS . 'app' . DS . 'controllers';
+    Coex::register('controllers', BP . DS . 'app' . DS . 'controllers');
     $paths[] = BP . DS . 'app' . DS . 'core';
+    Coex::register('core', BP . DS . 'app' . DS . 'core');
     $paths[] = BP . DS . 'app' . DS . 'models';
+    Coex::register('models', BP . DS . 'app' . DS . 'models');
     $paths[] = BP . DS . 'app' . DS . 'views';
+    Coex::register('views', BP . DS . 'app' . DS . 'views');
     $paths[] = BP . DS . 'css';
+    Coex::register('css', BP . DS . 'css');
     $paths[] = BP . DS . 'js';
+    Coex::register('js', BP . DS . 'js');
 
     $appPath = implode(PS, $paths);
     set_include_path($appPath . PS . Coex::registry('original_include_path'));
@@ -53,7 +60,7 @@
     require_once 'functions.php';
     
     if (login_check(dbConnector::getConnection())) {
-    	# code...
+    	Coex::loadControlPanel();
     }else{
     	Coex::loadLoginPage();
     }
@@ -69,7 +76,15 @@
 	     *
 	     */
 		public static function loadLoginPage(){
-			
+			require_once (Coex::registry('views') . '/login.php');
+		}
+
+		/**
+	     * Carga la página del Control Panel
+	     *
+	     */
+		public static function loadControlPanel(){
+			require_once (Coex::registry('views') . '/control_panel.php');
 		}
 
 		/**
