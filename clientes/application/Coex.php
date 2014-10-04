@@ -68,6 +68,7 @@
 	$controller = new Controller();
 	$controller->invoke();
 
+
 	final class Coex{
 		// array static : Manejo de variables en ejecución
 		private static $_registry = array();
