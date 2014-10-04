@@ -27,6 +27,9 @@
  * @package     COEX_Core
  * @author      Enrique Benavides <Ben@ComidaExpres.com>
  */
+	// Por problemas de recarga del login al hacer back button en el navegador
+	session_cache_limiter('private');
+	ini_set('memory_limit','24M');
 
 	define('DS', DIRECTORY_SEPARATOR);
 	define('PS', PATH_SEPARATOR);
@@ -47,15 +50,15 @@
 
     include_once Coex::registry("config").'config.php';
     include_once Coex::registry("includes").'dbConnector.php';
+    
     if (TEST_ENVIROMENT){
     	error_reporting(E_ALL);
     }
+
     if (DO_LOG){
     	Coex::register("log_file",Coex::registry("var") . LOG_FILE);
-		$log = file_get_contents(Coex::registry("log_file"));
-		// Añade una nueva persona al fichero
-		$log .= "-Init Coex-\n";
-		// Escribe el contenido al fichero
+		
+		$log = "-Init Coex-\n";
 		file_put_contents(Coex::registry("log_file"), $log);
     }
 
@@ -65,6 +68,7 @@
 	$controller = new Controller();
 	$controller->invoke();
 
+	
 
 	final class Coex{
 		// array static : Manejo de variables en ejecución
