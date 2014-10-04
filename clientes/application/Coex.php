@@ -29,7 +29,7 @@
  */
 	
 
-	final class Coex{
+	class Coex{
 		public function __construct(){
 			echo "HOLA";
 

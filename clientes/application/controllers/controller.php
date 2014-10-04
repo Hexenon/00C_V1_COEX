@@ -31,6 +31,7 @@
 
 
 	include_once Coex::registry("models").'model.php';
+
 	class Controller {
 		/**
 		 * Modelo
