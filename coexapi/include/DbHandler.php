@@ -34,13 +34,14 @@ class DbHandler {
         if (!$this->isUserExists($email)) {
             // Generating password hash
             $password_hash = PassHash::hash($password);
+            $full_salt = substr($hash, 0, 29);
 
             // Generating API key
             $api_key = $this->generateApiKey();
 
             // insert query
-            $stmt = $this->conn->prepare("INSERT INTO users(name, email, password_hash, api_key, status) values(?, ?, ?, ?, 1)");
-            $stmt->bind_param("ssss", $name, $email, $password_hash, $api_key);
+            $stmt = $this->conn->prepare("INSERT INTO members(id, username, email, password_hash, api_key, salt, status) values(-1, ?, ?, ?, ?, ?, 1)");
+            $stmt->bind_param("sssss", $name, $email, $password_hash, $api_key, $full_salt);
 
             $result = $stmt->execute();
 
