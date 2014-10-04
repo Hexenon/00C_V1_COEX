@@ -28,8 +28,8 @@
  * @author      Enrique Benavides <Ben@ComidaExpres.com>
  */
 	// Por problemas de recarga del login al hacer back button en el navegador
-	session_cache_limiter('private');
-	ini_set('memory_limit','24M');
+	//session_cache_limiter('private');
+	//ini_set('memory_limit','24M');
 
 	define('DS', DIRECTORY_SEPARATOR);
 	define('PS', PATH_SEPARATOR);
