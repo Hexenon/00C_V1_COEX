@@ -1,53 +1,56 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Login</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+<title>Login formulario</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--script-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 </head>
 <body>
-<div class="wrap">
-<!-- strat-contact-form -->	
-<div class="contact-form">
-<!-- start-form -->
-	<form class="contact_form" action="#" method="post" name="contact_form">
-		<h1>Login con tu Usuario</h1>
-	    <ul>
-	        <li>
-	            <input type="email" class="textbox1" name="email" placeholder="info@mail.com" required />
-	            <span class="form_hint">Ingresar correo valido</span>
-	             <p><img src="images/contact.png" alt=""></p>
-	        </li>
-	        <li>
-	            <input type="password" name="website" class="textbox2" placeholder="Contraseña">
-	            <p><img src="images/lock.png" alt=""></p>
-	        </li>
-         </ul>
-       	 	<input type="submit" name="Log In" value="Login"/>
-			<div class="clear"></div>	
-		<div class="clear"></div>	
-	</form>
-<!-- end-form -->
-<!-- start-account -->
-<div class="account">
-	<h2><a href="#">No tienes cuenta? Registrate!</a></h2>
-    <div class="span"><a href="#"><img src="images/facebook.png" alt=""/><i>Registrarme con Facebook</i><div class="clear"></div></a></div>	
-    <div class="span1"><a href="#"><img src="images/twitter.png" alt=""/><i>Registrarme con Twitter</i><div class="clear"></div></a></div>
-    <div class="span2"><a href="#"><img src="images/gplus.png" alt=""/><i>Registrarme con Google+</i><div class="clear"></div></a></div>
-</div>	
-<!-- end-account -->
-<div class="clear"></div>	
-</div>
-<!-- end-contact-form -->
+<div class="login">
+<!--start-loginform-->
+		<form name="login-form" class="login-form" action="" method="post">
+			<span class="header-top"><img src="images/topimg.png"/></span>
+		    <div class="header">
+		    <h1>Login</h1>
+		   	<span>Especificacion aqui...</span>
+		    </div>
+		    <div class="content">
+			<input type="email" class="input username" placeholder="Email" required="">
+		    <input type="password"   class="input password" placeholder="Contraseña" required="">
+		    </div>
+		    <div class="login_button">
+		    <input type="submit" name="submit" value="Login" class="button" />
+		    </div>
+		</form>
+<!--end login form-->
+<!--side-icons-->
+    <div class="user-icon"> </div>
+    <div class="pass-icon"> </div>
+    <!--END side-icons-->
+    <!--Side-icons-->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".username").focus(function() {
+			$(".user-icon").css("left","-69px");
+		});
+		$(".username").blur(function() {
+			$(".user-icon").css("left","0px");
+		});
+		
+		$(".password").focus(function() {
+			$(".pass-icon").css("left","-69px");
+		});
+		$(".password").blur(function() {
+			$(".pass-icon").css("left","0px");
+		});
+	});
+	</script>
+	<p class="copy_right">&#169; 2014 ComidaExpres.com<a href="#" target="_blank">&nbsp; Panel de Control</a> </p>
+
 </div>
 </body>
 </html>
