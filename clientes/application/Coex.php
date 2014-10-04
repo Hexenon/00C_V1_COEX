@@ -30,7 +30,7 @@
 	// Por problemas de recarga del login al hacer back button en el navegador
 	//session_cache_limiter('private');
 	//ini_set('memory_limit','24M');
-
+	echo '1';
 	define('DS', DIRECTORY_SEPARATOR);
 	define('PS', PATH_SEPARATOR);
 	define('BP', dirname(dirname(__FILE__)));
@@ -61,7 +61,7 @@
 		$log = "-Init Coex-\n";
 		file_put_contents(Coex::registry("log_file"), $log);
     }
-
+echo '2';
     include_once Coex::registry("includes").'functions.php';
 	include_once Coex::registry("controllers").'controller.php';
 
