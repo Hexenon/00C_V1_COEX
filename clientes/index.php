@@ -1,3 +1,3 @@
 <?php
-	include_once 'application/coex.php';
+	include 'application/coex.php';
 ?>
