@@ -1,5 +1,5 @@
 <?php
 	include_once 'application/Coex.php';
 
-	$coex = new Coex;
+	$coex = Coex::getInstance();
 	$coex->invoke();

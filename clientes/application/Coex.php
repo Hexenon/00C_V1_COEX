@@ -30,8 +30,13 @@
 	
 
 	final class Coex{
+		private __instance = new Coex;
+		public static function getInstance(){
+			return __instance;
+		}
+
 		public function __construct(){
-			echo "HOLA";
+			
 
 			// Por problemas de recarga del login al hacer back button en el navegador
 			//session_cache_limiter('private');
