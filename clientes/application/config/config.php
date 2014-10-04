@@ -30,7 +30,7 @@
 /**
  * Variables globales para la base de datos
  */
-define('DB_HOST','localhost');//'209.17.116.155');
+define('DB_HOST','209.17.116.155');//'209.17.116.155' IP del servidor mysql
 define('DB_DATABASE','login_hexus');
 define('DB_USER','login_user');
 define('DB_PASSWORD','eKcGZr59zAa2BEWU');
@@ -39,6 +39,6 @@ define('DB_PASSWORD','eKcGZr59zAa2BEWU');
  *  Variable para identificar si es un test de desarrollo 
  */
 define('TEST_ENVIROMENT',false);
-define('SECURE', false);
+define('SECURE', true);
 define('LOG_FILE', 'system.log');
 define('DO_LOG', true);
