@@ -30,9 +30,9 @@
 	
 
 	final class Coex{
-		private __instance = new Coex;
+		private static $__instance = new Coex;
 		public static function getInstance(){
-			return __instance;
+			return $__instance;
 		}
 
 		public function __construct(){
