@@ -1,5 +1,5 @@
 <?php
-	include_once 'application/coex.php';
+	include_once 'application/Coex.php';
 
-	$coex = new Coex;
-	$coex->invoke();
+	//$coex = new Coex;
+	//$coex->invoke();

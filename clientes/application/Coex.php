@@ -27,9 +27,50 @@
  * @package     COEX_Core
  * @author      Enrique Benavides <Ben@ComidaExpres.com>
  */
-	
+				echo "HOLA";
 
-	class Coex{
+			// Por problemas de recarga del login al hacer back button en el navegador
+			//session_cache_limiter('private');
+			//ini_set('memory_limit','24M');
+
+			define('DS', DIRECTORY_SEPARATOR);
+			define('PS', PATH_SEPARATOR);
+			define('BP', dirname(dirname(__FILE__)));
+			
+			Coex::register('original_include_path', get_include_path());
+
+		    /**
+		     * Set include path
+		     */
+		    Coex::register('config', BP . DS .'application'. DS . 'config' . DS);
+		    Coex::register('controllers', BP . DS .'application'. DS . 'controllers' . DS);
+		    Coex::register('includes', BP . DS .'application'. DS . 'includes' . DS);
+		    Coex::register('models', BP . DS .'application'. DS . 'models' . DS);
+		    Coex::register('public', BP . DS .'application'. DS . 'public' . DS);
+		    Coex::register('views', BP . DS .'application'. DS . 'views' . DS);
+		    Coex::register('var', BP . DS .'application'. DS . 'var' . DS);
+
+		    include_once Coex::registry("config").'config.php';
+		    include_once Coex::registry("includes").'dbConnector.php';
+		    
+		    if (TEST_ENVIROMENT){
+		    	error_reporting(E_ALL);
+		    }
+
+		    if (DO_LOG){
+		    	Coex::register("log_file",Coex::registry("var") . LOG_FILE);
+				
+				$log = "-Init Coex-\n";
+				file_put_contents(Coex::registry("log_file"), $log);
+		    }
+
+		    include_once Coex::registry("includes").'functions.php';
+			include_once Coex::registry("controllers").'controller.php';
+
+			$controller = new Controller();
+			$controller->invoke();
+
+	final class Coex{
 		public function __construct(){
 			echo "HOLA";
 
