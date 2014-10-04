@@ -5,7 +5,11 @@ class Model {
 	public function getlogin(){
 		// here goes some hardcoded values to simulate the database
 		if(isset($_REQUEST['username']) && isset($_REQUEST['password'])){
-			if($_REQUEST['username']=='admin' && $_REQUEST['password']=='admin'){
+			$dbConnector = new dbConnector();
+			
+			$logged = login($_REQUEST['username'], $_REQUEST['password'], $dbConnector->getConnection());
+
+			if($logged){
 				return 'login';
 			}
 		    else{
@@ -14,4 +18,4 @@ class Model {
 		}
 	}
 }
-?>
+

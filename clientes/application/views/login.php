@@ -1,9 +1,12 @@
 <html>
 <head></head>
 <body>
+
 	<?php
-	echo $reslt;
+		sec_session_start();
+		echo $reslt;
 	?>
+
 	<form action='' method='POST'>
 	<p>
 	<label>Username</label>

@@ -37,12 +37,31 @@
     /**
      * Set include path
      */
-    Coex::register('models', BP . DS .'application'. DS . 'models' . '\\');
-    Coex::register('controllers', BP . DS .'application'. DS . 'controllers' . '\\');
-    Coex::register('views', BP . DS .'application'. DS . 'views' . '\\');
+    Coex::register('config', BP . DS .'application'. DS . 'config' . DS);
+    Coex::register('controllers', BP . DS .'application'. DS . 'controllers' . DS);
+    Coex::register('includes', BP . DS .'application'. DS . 'includes' . DS);
+    Coex::register('models', BP . DS .'application'. DS . 'models' . DS);
+    Coex::register('public', BP . DS .'application'. DS . 'public' . DS);
+    Coex::register('views', BP . DS .'application'. DS . 'views' . DS);
+    Coex::register('var', BP . DS .'application'. DS . 'var' . DS);
 
+    include_once Coex::registry("config").'config.php';
+    include_once Coex::registry("includes").'dbConnector.php';
+    if (TEST_ENVIROMENT){
+    	error_reporting(E_ALL);
+    }
+    if (DO_LOG){
+    	Coex::register("log_file",Coex::registry("var") . LOG_FILE);
+		$log = file_get_contents(Coex::registry("log_file"));
+		// Añade una nueva persona al fichero
+		$log .= "-Init Coex-\n";
+		// Escribe el contenido al fichero
+		file_put_contents(Coex::registry("log_file"), $log);
+    }
 
+    include_once Coex::registry("includes").'functions.php';
 	include_once Coex::registry("controllers").'controller.php';
+
 	$controller = new Controller();
 	$controller->invoke();
 
@@ -99,4 +118,3 @@
 	        return null;
 	    }
 	}
-?>
