@@ -54,11 +54,11 @@
 			$reslt = $this->model->getlogin();     // it call the getlogin() function of model class and store the return value of this function into the reslt variable.
 			if($reslt == 'login')
 			{
-				return Coex::registry("views").'afterlogin.php';
+				include_once Coex::registry("views").'afterlogin.php';
 			}
 			else
 			{
-				return Coex::registry("views").'login.php';
+				include_once Coex::registry("views").'login.php';
 			}
 		}
 	}
