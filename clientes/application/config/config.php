@@ -38,7 +38,7 @@ define('DB_PASSWORD','eKcGZr59zAa2BEWU');
 /**
  *  Variable para identificar si es un test de desarrollo 
  */
-define('TEST_ENVIROMENT',true);
+define('TEST_ENVIROMENT',false);
 define('SECURE', true);
 define('LOG_FILE', 'system.log');
 define('DO_LOG', true);
