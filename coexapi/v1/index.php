@@ -1,4 +1,6 @@
 <?php
+echo "hola";
+exit();
 
 require_once '../include/DbHandler.php';
 require_once '../include/PassHash.php';
