@@ -32,10 +32,10 @@
 	final class Coex{
 		private static $__instance = null;
 		public static function getInstance(){
-			if ($__instance == null){
-				$__instance = new Coex;
+			if (self::$__instance == null){
+				self::$__instance = new Coex;
 			}
-			return $__instance;
+			return self::$__instance;
 		}
 
 		public function __construct(){
