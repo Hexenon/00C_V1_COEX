@@ -1,6 +1,4 @@
 <?php 
-echo 'test';
-
 
 require 'Slim/Slim.php'; 
 \Slim\Slim::registerAutoloader();
@@ -8,7 +6,7 @@ require 'Slim/Slim.php';
 $app = new \Slim\Slim();
 
 $app->get('/demo/:name', function ($name) { 
-    echo "Hello, $name"; 
+    echo json_encode( "Hello, " . $name );
 });
 
 $app->run();
