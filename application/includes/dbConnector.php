@@ -32,20 +32,9 @@
 
 		public function __construct(){
 			self::$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-			/* check connection */
-			if (mysqli_connect_errno()) {
-			    if (DO_LOG){
-					$log = "Connect failed: ".mysqli_connect_error() . "\n";
-					file_put_contents(Coex::registry("log_file"), $log, FILE_APPEND);
-			    }
-			}
 		}
 
 		public static function getConnection(){
-			if (DO_LOG){
-				$log = "Retrieve Connection \n";				// Escribe el contenido al fichero
-				file_put_contents(Coex::registry("log_file"), $log, FILE_APPEND);
-		    }
 			return  self::$conn;
 		} 
 	}
