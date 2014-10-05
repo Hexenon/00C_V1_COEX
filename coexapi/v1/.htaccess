@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteBase /clientes/
+RewriteBase /clientes/coexapi/v1/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
