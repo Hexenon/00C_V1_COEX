@@ -42,8 +42,12 @@ class Model {
 
 
 			$dbConnector = new dbConnector();
+			$mysqli = $dbConnector->getConnection();
+			if (gettype($mysqli) == 'string'){
+				return "Imposible conectarse a la base de datos\n"+$mysqli;
+			}
 
-			$logged = login($_REQUEST['username'], $_REQUEST['password'], $dbConnector->getConnection());
+			$logged = login($_REQUEST['username'], $_REQUEST['password'], $mysqli);
 			return $logged;
 			
 		}
