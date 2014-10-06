@@ -157,7 +157,6 @@ $app->post('/registerapp', 'authenticateApp', function() use ($app) {
 				    		'errmsg'=> substr(end($handler->errors), 3)),
 			    		'error'=>true);
 	    		}
-	    	
 	    	}
 		    echo json_encode($result);
 		});
@@ -286,6 +285,7 @@ $app->get('/userinfo/:email', 'authenticateApp', function($email) use ($app) {
 	    		}
 	    	
 	    	}
+
 		    echo json_encode($result);
 		});
 
