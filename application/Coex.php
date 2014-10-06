@@ -78,6 +78,9 @@
 
 		    include_once Coex::registry("includes").'functions.php';
 			include_once Coex::registry("controllers").'controller.php';
+			if (!defined('API_CALL')){
+				define('API_CALL', false);
+			}
 		}
 		// array static : Manejo de variables en ejecución
 		private static $_registry = array();

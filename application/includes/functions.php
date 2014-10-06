@@ -66,7 +66,7 @@ function login($email, $password, $mysqli) {
         WHERE email = ?
         LIMIT 1")) {
 
-        if (DO_LOG){
+        if (DO_LOG && !API_CALL){
             $log = "Email: $email \n";
             file_put_contents(Coex::registry("log_file"), $log, FILE_APPEND);
         }
@@ -82,7 +82,7 @@ function login($email, $password, $mysqli) {
         // hash the password with the unique salt.
         $password = hash('sha512', $password . $salt);
 
-        if (DO_LOG){
+        if (DO_LOG && !API_CALL){
             $log = "Rows: $stmt->num_rows \n";
             file_put_contents(Coex::registry("log_file"), $log, FILE_APPEND);
         }
@@ -91,7 +91,7 @@ function login($email, $password, $mysqli) {
             // If the user exists we check if the account is locked
             // from too many login attempts 
   
-            if (DO_LOG){
+            if (DO_LOG && !API_CALL){
                 $log = "$password == $db_password\n";
                 file_put_contents(Coex::registry("log_file"), $log, FILE_APPEND);
             }

@@ -27,7 +27,7 @@
  * @author      Enrique Benavides <Ben@ComidaExpres.com>
  */
 
-class funcHandler{
+class Handler{
     /**
      * Stores the DB Connector
      * @var mysqli
@@ -63,6 +63,52 @@ class funcHandler{
         }
 
         $this->conn = $mysqli;
+    }
+    /**
+     * Returns the connection manager to database
+     * @return mysqli Actual connection to database
+     */
+    public function getConnection(){
+        return $this->conn;
+    }
+
+    /**
+     * Used to register a new App into our database
+     * @param  string $name     the AppName provided
+     * @return bool           returns if the app has been created.
+     */
+    public function registerNewApp($name){
+        // First check if user already existed in db
+        if (!$this->isAppExists($name)) {
+            // Generating API key
+            $api_key = $this->generateApiKey();
+
+            // Prepares the date for "created_at" field
+            $created_at = date('Y-m-d');
+
+            // insert query
+            $stmt = $this->conn->prepare("INSERT INTO apps(appname, api_key, created_at, status) values(?, ?, ?, 1)");
+            $stmt->bind_param("sss", $name, $api_key, $created_at);
+
+            $result = $stmt->execute();
+
+            $stmt->close();
+
+            // Check for successful insertion
+            if ($result) {
+                // User successfully inserted
+                array_push($this->messages, array("api_key"=>$api_key));
+                return true;
+            } else {
+                // Failed to create app
+                array_push($this->errors,'501Failed to create the app');
+                return false;
+            }
+        } else {
+            // App with same email already existed in the db
+            array_push($this->errors,'502App already in database');
+            return false;
+        }
     }
 
     /**
@@ -128,6 +174,20 @@ class funcHandler{
         return $num_rows > 0;
     }
 
+    /**
+     * Checking for duplicate app by name
+     * @param String $name email to check in db
+     * @return boolean
+     */
+    private function isAppExists($name) {
+        $stmt = $this->conn->prepare("SELECT id from apps WHERE appname = ?");
+        $stmt->bind_param("s", $name);
+        $stmt->execute();
+        $stmt->store_result();
+        $num_rows = $stmt->num_rows;
+        $stmt->close();
+        return $num_rows > 0;
+    }
     /**
      * Generating random Unique MD5 String for user Api key
      */
@@ -222,7 +282,40 @@ class funcHandler{
         $stmt->close();
         return $num_rows > 0;
     }
+    /**
+     * Validating App api key
+     * If the api key is there in db, it is a valid key
+     * @param String $api_key user api key
+     * @return boolean
+     */
+    public function isValidApiKeyApp($api_key) {
+        $stmt = $this->conn->prepare("SELECT id from apps WHERE api_key = ?");
+        $stmt->bind_param("s", $api_key);
+        $stmt->execute();
+        $stmt->store_result();
+        $num_rows = $stmt->num_rows;
+        $stmt->close();
+        return $num_rows > 0;
+    }
 
+     /**
+     * Fetching app id by api key
+     * @param String $api_key user api key
+     */
+    public function getAppId($api_key) {
+        $stmt = $this->conn->prepare("SELECT id FROM apps WHERE api_key = ?");
+        $stmt->bind_param("s", $api_key);
+        if ($stmt->execute()) {
+            $stmt->bind_result($app_id);
+            $stmt->fetch();
+            // TODO
+            // $app_id = $stmt->get_result()->fetch_assoc();
+            $stmt->close();
+            return $app_id;
+        } else {
+            return NULL;
+        }
+    }
 
     /**
      * Verifying required params posted or not
