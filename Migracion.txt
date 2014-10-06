@@ -1,0 +1,19 @@
+
+1-    Back up the files in the test server.
+2-    Go to your test site admin backend and refresh Cache by System > Cache Management. Then download and save the whole magento shop root directory via File manager or FTP tools.
+3-    Export the magento Database.
+4-    Enter your server control panel phpmyadmin database area and EXPORT your magento shop database in to “name.sql.zip “format.
+5-    Move magento files to the new server.
+6-    Upload the root directory (all the files) of your test magento shop backup taken on the step 1 in to the new server domain folder.
+7-    Import the database to the new server.
+8-    Go to your new host account phpmyadmin and create a new database, database user and database user password. Then open the database sql file saved on step 2 with a text editor and edit the database name mention in to the new database name, save it. Then import the “name.sql.zip “database backup saved on the step 2 in to this new database.
+9-    Update the database details file.
+10-   Next step is to edit the database details file. To do this go to magento live site folder, find out “app/etc/local.xml” file and enter the latest Database details which is created on the step 4.
+11-   Modify the base URL database table.
+12-   Next is to replace old server domain name with new domain name. For this go to your new server phpmyadmin magento database and modify core_config_data table as shown below.
+        web/unsecure/base_url     >   http://www.newdomain.com/
+        web/secure/base_url         >   http://www.newdomain.com/
+13-   Refresh cache and Reindex Data.
+14-   The final step is to clear the cache. Go to your sites admin panel (Login with the test site username and password) System > Cache management > Select all & disable cache management. Then navigate through System—>Index Management. Select fields in Status — ‘REINDEX REQUIRED’, then choose ‘Reindex Data’ from drop down and click Submit or delete all the files in “var/session” and “/var/cache” folders of new site.
+
+Take a look to your new magento ecommerce store frontend.
