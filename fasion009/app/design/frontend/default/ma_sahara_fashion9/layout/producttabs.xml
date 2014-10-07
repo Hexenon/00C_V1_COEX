@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <reference name="head">
+         <action method="addCss" ifconfig="producttabs/producttabs_config/enabled"><stylesheet>magentothem/producttabs/css/jquery.bxslider.css</stylesheet></action>
+       <!--   <action method="addCss" ifconfig="producttabs/producttabs_config/enabled"><stylesheet>magentothem/producttabs/css/style.css</stylesheet></action> -->
+         <!-- <action method="addJs" ifconfig="producttabs/producttabs_config/jquery"><script>magentothem/jquery.min.js</script></action>             -->
+         <!-- <action method="addJs" ifconfig="producttabs/producttabs_config/jquery"><script>magentothem/noconflict.js</script></action>             -->
+         <action method="addJs" ifconfig="producttabs/producttabs_config/enabled"><script>magentothem/jquery.bxslider.js</script></action>  
+     </reference>
+
+     <block type="producttabs/producttabs" name="producttabs">
+        <action method="setTemplate">
+            <template>magentothem/producttabs/producttabs.phtml</template>
+        </action>
+    </block>  
+
+    <!-- Top content -->
+<!--     <reference name="content">
+        <action method="insert" ifconfig="producttabs/producttabs_config/enabled">
+            <block>producttabs</block>
+        </action>
+    </reference> -->
+
+    <!-- Bottom content -->
+<!--     <reference name="content">
+        <action method="append" ifconfig="producttabs/producttabs_config/enabled">
+            <block>producttabs</block>
+        </action>
+    </reference> -->
+
+<!-- 
+    <reference name="content">
+        <block type="producttabs/producttabs" name="producttabs" before="-" template="magentothem/producttabs/producttabs.phtml" /> 
+    </reference> -->
+
+</cms_index_index>
+
+<producttabs_index_result>  
+    <reference name="root">
+        <action method="setTemplate" ifconfig="producttabs/producttabs_config/enabled"><template>magentothem/producttabs/result.phtml</template></action>
+
+        <block type="producttabs/product_list" name="product_list" template="magentothem/producttabs/product/grid.phtml" />
+    </reference>
+</producttabs_index_result>
+
+</layout> 

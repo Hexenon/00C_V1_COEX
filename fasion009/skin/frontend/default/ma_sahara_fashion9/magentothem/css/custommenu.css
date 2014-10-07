@@ -1,0 +1,148 @@
+.pt_custommenu {
+    position:relative;
+    z-index:1000;
+    font-size: 14px;
+    margin: 0 auto;
+    width: 100%;
+}
+.pt_custommenu div.pt_menu {
+    float: left;margin-right: 1px
+}
+.pt_custommenu div.pt_menu .parentMenu a,
+.pt_custommenu div.pt_menu .parentMenu span.block-title{
+    padding:18px 20px;
+    text-decoration: none;
+    display:block;
+    line-height: 32px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: SegoeUI8Regular
+}
+.pt_custommenu div.pt_menu.active {
+    background-color:#f55c59    ;
+}
+#pt_menu_home a span{
+ display: block;
+text-indent: -99999px;
+width:21px;
+height:21px; 
+background: url(../images/icon-home.png) no-repeat 0 0; 
+}
+#pt_menu_home a{padding: 24px 24px 23px}
+.pt_custommenu div.popup {
+    position:absolute;
+    z-index:3000;
+    background-color:#fff;
+    text-align:left;
+    width: 904px;
+    padding: 0;
+    margin: 0;
+    top: 68px !important;
+       border:1px solid #f55c59;
+       border-top:none;
+}
+.pt_custommenu div.pt_menu .parentMenu a:hover,
+.pt_custommenu div.pt_menu .parentMenu span.block-title:hover,
+.pt_custommenu #pt_menu_link ul li a.act,
+.pt_custommenu #pt_menu_link ul li a:hover,
+.pt_custommenu div.pt_menu.act {
+    background-color:#f55c59;
+}
+.pt_custommenu div.popup a {
+    text-decoration: none;
+    display:block;
+    line-height: 30px;
+}
+
+
+.pt_custommenu .itemMenu h4.level1,
+.pt_custommenu .itemMenu a.level1{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #f55c59;
+}
+.pt_custommenu .itemMenu h4.level1:hover,
+.pt_custommenu .itemMenu a.level1:hover {
+    color: #000;
+}
+.pt_custommenu .itemSubMenu h4.level2,
+.pt_custommenu .itemSubMenu a.level2,
+.pt_custommenu .itemSubMenu h4.level3,
+.pt_custommenu .itemSubMenu a.level3,
+.pt_custommenu .itemMenu a.level1.nochild{
+    color: #434343;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 12px;
+}
+.pt_custommenu .itemSubMenu a.level2:hover,
+.pt_custommenu .itemMenu a.level1.nochild:hover{
+    color: #f55c59;
+}
+.pt_custommenu div.popup a.actParent {
+    color: #000;
+}
+.pt_custommenu div.popup a.act {
+    color: #f55c59 !important;
+}
+.pt_custommenu div.column {
+    float:left;
+    width:200px; /* column width */
+    margin-right: 10px;
+}
+.pt_custommenu div.column.last {
+    border-right: 0 none;
+    margin-right: 0;
+    padding-right: 0;
+}
+.pt_custommenu div.itemSubMenu {padding: 10px 0 0}
+
+.pt_custommenu .block2{
+    margin-top: 10px;
+    float: left;
+}
+.pt_custommenu div.popup .block1{
+    overflow: hidden;
+    float: left;
+    padding: 50px 30px 40px;
+}
+.pt_custommenu div.popup .block1 .column{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+.pt_custommenu div.popup .blockright img{
+    max-width: 100%;
+} 
+
+.pt_custommenu div.pt_menu .parentMenu p{
+    margin: 0;
+    padding: 0;
+}
+.pt_custommenu #pt_menu_link{
+    padding: 0;
+}
+.pt_custommenu #pt_menu_link .parentMenu ul li{
+    float: left;
+    list-style: none;
+}
+.pt_custommenu #pt_menu_link .parentMenu ul li a{
+    float: left;
+    padding: 0 10px;
+    display: block;
+}
+.pt_custommenu .clearBoth {
+    clear:both;
+}
+#pt_menu_pt_item_menu_custom_menu.active .parentMenu span{cursor: pointer;}
+#pt_menu_pt_item_menu_custom_menu .block2{margin: 0}
+#pt_menu_pt_item_menu_custom_menu .custom-inner{padding: 15px;overflow: hidden;}
+.static_block_custom_menu{width:600px !important}
+.box-html{width:340px;float: left;padding: 10px}
+.box-video{width:230px;float: left;padding: 10px}
+.menu-title{margin:0 0 10px 0;text-transform: uppercase;border-bottom: 1px solid #ddd;color: #e66b6b;padding-bottom: 5px}
+.menu-title span{text-decoration: none !important}
+.menu-inner a {margin-bottom: 16px}
+.menu-content{padding-top: 10px}
+.static_block_custom_menu .menu-content p{font-size:12px}

@@ -1,0 +1,86 @@
+<?php if(!$this->getProducttabsCfg('enabled')) return;
+
+$default = $this->getTypeDefault();
+$_tabs = $this->getTabs();
+$numtab =count($_tabs);
+if($numtab){
+?>
+
+	<div class= "producttabs">
+
+			<h2 class ="title"><?php echo $this->__($this->getProducttabsCfg('title'))?></h2>
+			<ul id="producttabs">
+				<?php
+					$i=1;
+					foreach ($_tabs as $type =>$name) {
+					if($i==1){ $oder = 'first active'; }else if($i== $numtab){ $oder="last";}else {$oder="";}
+					$i++;
+					echo '<li class="item '.$active.' ' .$oder.'" data-type ="'.$type.'"><h3 class ="title">'.$name.'</h3></li>';
+					}
+				?>
+			</ul>
+			<div class="ajax_loading" style="display:none">
+				<img src="<?php echo $this->getSkinUrl('magentothem/producttabs/images/bx_loader.gif')?>" alt="<?php echo $this->__('Loading...');?>">
+			</div>
+			
+				<div class="producttabs-products">
+				</div>
+	
+	</div>
+
+<script type="text/javascript">
+
+	jQuery( document ).ready(function($) {
+
+		(function(selector){
+
+			$content = $(selector);
+			$nav	 = $('#producttabs', $content);
+			$products= $('.producttabs-products', $content);
+			$loading = $(".ajax_loading", $content);
+			$items 	 = $('.item', $nav);
+			$items.click(function() {
+				var type = $(this).data('type');
+				if(type != "random" && $(this).hasClass('active')) return;
+				$items.removeClass('active');
+				$(this).addClass('active');
+				getProduct(type);
+			});
+
+			<?php if($this->getTypeDefault()) echo 'getProduct("'.$default.'");';?>
+
+			function getProduct(type) {
+				$loading.show();
+				$.ajax({
+					type:'post',
+					data:{ type: type},
+					url:'<?php echo $this->getUrl('producttabs/index/result')?>',
+					success: function(data){
+						$loading.hide();
+						$products.html(data);		
+						$data = data;
+
+						$('.products-grid', $products).bxSlider({   
+							<?php echo $this->setBxslider()?>
+						});
+						
+				        jQuery('.button.btn-cart').attr('data-original-title',jQuery('button.btn-cart').attr('title'));
+				        jQuery('.link-wishlist').attr('data-original-title',jQuery('.link-wishlist').attr('title'));
+				        jQuery('.link-compare').attr('data-original-title',jQuery('.link-compare').attr('title'));
+				        jQuery('.email-friend-a').attr('data-original-title',jQuery('.email-friend-a').attr('title'));
+				        jQuery('.brand_item').attr('data-original-title',jQuery('.brand_item').attr('title'));
+				        jQuery('button.btn-cart, .link-wishlist, .link-compare,.email-friend-a,.brand_item').attr('rel', 'tooltip');
+				        jQuery("[rel=tooltip]").tooltip();
+				        						
+					},
+				});		
+			}
+
+		})('.producttabs');
+
+		});
+</script>
+
+<?php
+}
+?>

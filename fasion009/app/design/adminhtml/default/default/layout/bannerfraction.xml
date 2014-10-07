@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <bannerfraction_adminhtml_bannerfraction_index>
+        <reference name="content">
+            <block type="bannerfraction/adminhtml_bannerfraction" name="bannerfraction" />
+        </reference>
+    </bannerfraction_adminhtml_bannerfraction_index>
+</layout>

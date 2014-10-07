@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<ma_sahara_fashion9>
+    <blocks>
+        <block>
+            <title>Banner Static 2</title>
+            <identifier>home_banner_static_2</identifier>
+            <content>
+                      <![CDATA[
+							<div class="home-banner-static2 row">
+							<div class="ca-box ca-box1 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+							<div class="box-content">
+							<div class="ca-img"><a href="#"><img src="{{media url="wysiwyg/images_static01.jpg"}}" alt="" /></a></div>
+							<div class="ca-content">
+							<h3 class="ca-sub1">Hello</h3>
+							<h3 class="ca-sub2">this summer</h3>
+							<h3 class="ca-sub3">Designed by MarCorae</h3>
+							</div>
+							</div>
+							</div>
+							<div class="ca-box ca-box2 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+							<div class="box-content">
+							<div class="ca-img"><a href="#"><img src="{{media url="wysiwyg/images_static02.jpg"}}" alt="" /></a></div>
+							<div class="ca-content">
+							<h3 class="ca-sub1">Collection</h3>
+							<h3 class="ca-sub2">victory secreat</h3>
+							<h3 class="ca-sub3">street fashion</h3>
+							</div>
+							</div>
+							</div>
+							<div class="ca-box ca-box3 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+							<div class="box-content">
+							<div class="ca-img"><a href="#"><img src="{{media url="wysiwyg/images_static03.jpg"}}" alt="" /></a></div>
+							<div class="ca-content">
+							<h3 class="ca-sub1">Hello</h3>
+							<h3 class="ca-sub2">this summer</h3>
+							<h3 class="ca-sub3">Designed by MarCorae</h3>
+							</div>
+							</div>
+							</div>
+							</div>
+                        ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Banner Home Content</title>
+            <identifier>banner_home_content</identifier>
+            <content>
+			<![CDATA[
+				<div class="banner-home-content">
+					<div class="banner-home-content-inner"><a class="overlay1">&nbsp;</a> <a href="#"><img src="{{media url="wysiwyg/img23.jpg"}}" alt="" /></a></div>
+				</div>
+		    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+        <block>
+            <title>Footer Static</title>
+            <identifier>footer_static</identifier>
+            <content>
+                    <![CDATA[
+					<div class="f-col col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>information</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="{{store direct_url="about-magento-demo-store"}}">About us</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Delivery Information</a></li>
+					<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Discount</a></li>
+					<li><a href="{{store direct_url="customer-service"}}">Custom Service</a></li>
+					<li class="last"><a href="{{store direct_url="catalogsearch/term/popular"}}">Terms &amp; Condition</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col2 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>our support</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Sitemap</a></li>
+					<li><a href="{{store direct_url="privacy-policy-cookie-restriction-mode"}}">Privacy Policy</a></li>
+					<li><a href="{{store direct_url="customer/account/index"}}">Your Account</a></li>
+					<li><a href="{{store direct_url="catalogsearch/advanced"}}">Advanced Search</a></li>
+					<li><a href="{{store direct_url="catalogsearch/term/popular"}}">Terms &amp; Condition</a></li>
+					<li class="last"><a href="{{store direct_url="contacts"}}">Contact Us</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col3 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>our service</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="{{store direct_url="contacts"}}">My Account</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Order History</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Returns</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Specials</a></li>
+					<li><a href="{{store direct_url="contacts"}}">Mobiles</a></li>
+					<li class="last"><a href="{{store direct_url="catalog/seo_sitemap/category"}}">Site Map</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col4 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>about unis Fashion</h3>
+					</div>
+					<div class="footer-static-content">
+					<div class="box-img"><img src="{{media url="wysiwyg/fashion.png"}}" alt="" /></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Suspendisse laoreet dictum orci eget varius. Curabitur ligula felis, vulputate at.</p>
+					</div>
+					<ul class="link-follow ">
+					<li class="first"><a class="facebook fa fa-facebook" href="#"><span>facebook</span></a></li>
+					<li><a class="rss fa fa-rss" href="#"><span>rss</span></a></li>
+					<li><a class="twitter fa fa-twitter" href="#"><span>twitter</span></a></li>
+					<li><a class="linkedin fa fa-linkedin" href="#"><span>linkedin</span></a></li>
+					<li class="last"><a class="dribbble fa fa-dribbble" href="#"><span>dribbble</span></a></li>
+					</ul>
+					</div>
+					]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Banner Left</title>
+            <identifier>banner_left</identifier>
+            <content>
+			<![CDATA[
+				<div class="banner-left"><a class="overlay" href="#">&nbsp;</a> <a href="#"><img src="{{media url="wysiwyg/banner-left.jpg"}}" alt="" /></a></div>
+		    ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+        <block>
+            <title>Header Static</title>
+            <identifier>header_static</identifier>
+            <content>
+                <![CDATA[
+					<div class="header-static">Call us:<span>84. 888 888 686 </span></div>
+                ]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+
+		<block>
+            <title>Custom Menu</title>
+            <identifier>pt_item_menu_custom_menu</identifier>
+            <content>
+                   <![CDATA[
+					<div class="static_block_custom_menu">
+						<div class="custom-inner">
+						<div class="box-html">
+						<div class="menu-title"><span>VIDEO WIDGETS </span></div>
+						<div class="menu-content">
+						<div class="menu-inner"><object width="320" height="200" data="http://www.youtube.com/v/TZADnkwNEO8?wmode=transparent" type="application/x-shockwave-flash"><param name="src" value="http://www.youtube.com/v/TZADnkwNEO8?wmode=transparent" /></object>
+						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum</p>
+						<a href="#"><img src="{{media url="wysiwyg/img13.jpg"}}" alt="" /></a></div>
+						</div>
+						</div>
+						<div class="box-video">
+						<div class="menu-title"><span>Images Widgets</span></div>
+						<div class="menu-content"><a href="#"><img src="{{media url="wysiwyg/img14.jpg"}}" alt="" /></a></div>
+						</div>
+						</div>
+						</div>
+					]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+    </blocks>
+</ma_sahara_fashion9>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ma_sahara_fashion9>
+    <resources>
+        <resource>
+            <title>Home ma_sahara fashion9</title>
+            <identifier>ma_sahara_fashion9_home</identifier>
+            <root_template>one_column</root_template>
+				<content><![CDATA[
+					<div class="home-content">{{block type="page/html" name="home.banner.static.2" template="magentothem/home_banner_static_2.phtml"}} {{block type="producttabs/producttabs" name="producttabs" template="magentothem/producttabs/producttabs.phtml" }} {{block type="cms/block" block_id="banner_home_content"}} {{block type="newproduct/newproduct" name="newproduct" template="magentothem/newproduct/newproduct.phtml" }}</div>
+				]]></content>
+				<sort_order>1</sort_order>
+            <is_active>1</is_active>
+        </resource>
+    </resources>
+</ma_sahara_fashion9>
